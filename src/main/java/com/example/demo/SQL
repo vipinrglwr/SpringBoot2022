@@ -1,0 +1,5 @@
+create table product(id int primary key,name varchar(20),price int);
+
+create table orders(id int primary key,qty int,p_id int,c_id int,foreign key(p_id)  references product(id),foreign key(c_id)  references customer(id));
+
+create table customer(id int primary key,name varchar(20),email varchar(20));
