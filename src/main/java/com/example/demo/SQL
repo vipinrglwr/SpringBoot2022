@@ -6,7 +6,7 @@ create table customer(id int primary key,name varchar(20),email varchar(20));
 
 # 12 August
 
-1.get the cistomer who purchased more product
+1.get the customer who purchased more product
 2.                 who purchased more amount
 3. get the total amount of ram
 
