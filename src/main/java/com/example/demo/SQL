@@ -151,3 +151,33 @@ mysql> select c.name, sum(total) from orders o inner join customer c on c.id =o.
 | shyam |     161000 |
 +-------+------------+
 1 row in set (0.00 sec)
+
+
+
+package com.example.demo.webapp.controller;
+
+import com.example.demo.webapp.entity.Registration;
+import com.example.demo.webapp.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+
+    @Autowired
+    private UserRepository userRepository;
+
+
+    @PostMapping("saveUserData")
+    public String saveDatabase(@RequestBody UserData userData){
+        userRepository.save(userData);
+        return "Save Userdata";
+    }
+
+
+}
+
+
+implementation'org.springframework.boot:spring-boot-starter-validation'
