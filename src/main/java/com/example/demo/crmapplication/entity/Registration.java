@@ -7,6 +7,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -19,10 +21,12 @@ public class Registration {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull(message = "first name can not be null")
+//    @NotNull(message = "first name can not be null")
+    @NotBlank
     @Column(length = 50)
     private String firstName;
 
+    @NotEmpty
     @NotNull(message = "Last name can not be null")
     private String lastName;
 
@@ -30,7 +34,7 @@ public class Registration {
     @Email(message = "email should be in correct format")
     private String email;
 
-    @NotNull(message = "User Name can not be null")
+//    @NotNull(message = "User Name can not be null")
     private String userName;
 
     @NotNull(message = "Password can not be null")

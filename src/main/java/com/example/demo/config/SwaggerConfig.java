@@ -31,4 +31,5 @@ public class SwaggerConfig {
         return new ApiInfoBuilder().title("Java  6 April spring batch api").build();
     }
 
+
 }
