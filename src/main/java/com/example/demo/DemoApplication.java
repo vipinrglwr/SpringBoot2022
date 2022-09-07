@@ -1,5 +1,9 @@
 package com.example.demo;
 
+import com.example.demo.aop.BoysStudent;
+import com.example.demo.aop.GirlStudent;
+import com.example.demo.aop.assignment1.Login1;
+import com.example.demo.aop.assignment1.Login2;
 import com.example.demo.databaseconnection.Employee;
 import com.example.demo.databaseconnection.EmployeeRepo;
 import com.example.demo.di.Student;
@@ -24,11 +28,24 @@ public class DemoApplication {
 		vodafone.data();
 		vodafone.calling();
 
-		Student student =context.getBean(Student.class);
-		student.callSubject();
+		Login1 login1 = context.getBean(Login1.class);
+		login1.member();
 
-		Student student1 =context.getBean(Student.class);
-		student1.callSubject();
+		Login2 login2 =context.getBean(Login2.class);
+		login2.member();
+
+//		BoysStudent boysStudent = context.getBean(BoysStudent.class);
+//		boysStudent.studyBoy(2);
+//
+//		GirlStudent girlStudent =context.getBean(GirlStudent.class);
+//		girlStudent.study();
+
+
+//		Student student =context.getBean(Student.class);
+//		student.callSubject();
+//
+//		Student student1 =context.getBean(Student.class);
+//		student1.callSubject();
 
 
 //		Employee employee = context.getBean(Employee.class);
